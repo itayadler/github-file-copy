@@ -16,6 +16,6 @@
       "js": ["contentscript.js"]
     }
   ],
-  "permissions": ["activeTab", "webNavigation"],
+  "permissions": ["webNavigation"],
   "key": "anjhmabndidgafaeimakjfiakogbohmg"
 }
