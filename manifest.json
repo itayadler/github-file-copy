@@ -1,0 +1,21 @@
+{
+  "name": "Github Copy File Extension",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "icons": {
+    "48": "icons/48.png"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.github.com/*", "https://github.com/*"],
+      "run_at": "document_idle",
+      "js": ["contentscript.js"]
+    }
+  ],
+  "permissions": ["activeTab", "webNavigation"],
+  "key": "anjhmabndidgafaeimakjfiakogbohmg"
+}

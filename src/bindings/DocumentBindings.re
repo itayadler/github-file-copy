@@ -1,0 +1,1 @@
+[@bs.val] [@bs.scope "document"] external execCommand1: string => bool = "execCommand";

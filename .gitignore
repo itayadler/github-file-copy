@@ -1,0 +1,13 @@
+.DS_Store
+dist
+.merlin
+.bsb.lock
+npm-debug.log
+**/lib/bs/
+/bundleOutput/
+web-ext-artifacts/
+.graphql_ppx_cache
+**/*.bs.js
+/build
+
+node_modules

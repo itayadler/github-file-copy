@@ -1,0 +1,42 @@
+{
+  "name": "github-copy-file",
+  "description": "A chrome extension that adds a Copy file to clipboard button to Github code browser",
+  "version": "0.0.1",
+  "license": "MIT",
+  "scripts": {
+    "sign": "web-ext -c config/webext.conf.js sign",
+    "build": "webpack --config ./config/webpack.prod.js && web-ext -c config/webext.conf.js build",
+    "lint": "web-ext -c config/webext.conf.js lint",
+    "reason:watch": "yarn bsb -make-world -w",
+    "web-ext:watch": "yarn web-ext run --config=./config/webext.conf.js --pre-install -t chromium -u https://github.com/teal-language/tl/blob/master/.editorconfig",
+    "webpack:watch": "webpack --mode development -w --config ./config/webpack.dev.js",
+    "start": "yarn bsb && webpack --mode development --config ./config/webpack.dev.js && concurrently --kill-others 'yarn webpack:watch' 'yarn reason:watch' 'yarn web-ext:watch'"
+  },
+  "dependencies": {
+    "bs-webapi": "^0.15.9"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "babel-loader": "^8.1.0",
+    "bs-platform": "~7.3.2",
+    "concurrently": "^5.1.0",
+    "copy-webpack-plugin": "^5.1.1",
+    "css-loader": "^3.5.2",
+    "file-loader": "~6.0.0",
+    "html-webpack-plugin": "~4.2.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "optimize-css-assets-webpack-plugin": "~5.0.3",
+    "postcss-flexbugs-fixes": "4.1.0",
+    "postcss-loader": "~3.0.0",
+    "postcss-normalize": "8.0.1",
+    "postcss-safe-parser": "4.0.1",
+    "source-map-loader": "^0.2.4",
+    "style-loader": "^1.1.4",
+    "url-loader": "^4.1.0",
+    "web-ext": "^4.1.0",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3",
+    "webpack-merge": "^4.2.2"
+  }
+}
