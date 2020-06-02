@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "sign": "web-ext -c config/webext.conf.js sign",
-    "build": "webpack --config ./config/webpack.prod.js && web-ext -c config/webext.conf.js build",
+    "build": "NODE_ENV=production webpack --config ./config/webpack.prod.js && web-ext -c config/webext.conf.js build",
     "lint": "web-ext -c config/webext.conf.js lint",
     "reason:watch": "yarn bsb -make-world -w",
     "web-ext:watch": "yarn web-ext run --config=./config/webext.conf.js --pre-install -t chromium -u https://github.com/teal-language/tl/blob/master/.editorconfig",

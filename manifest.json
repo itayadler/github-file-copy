@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "manifest_version": 2,
   "icons": {
-    "48": "icons/48.png"
+    "16": "icons/16.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
   },
   "background": {
     "scripts": ["background.js"],
@@ -17,5 +19,5 @@
     }
   ],
   "permissions": ["webNavigation"],
-  "key": "anjhmabndidgafaeimakjfiakogbohmg"
+  "key": "gnbcglemedljbhbgpdonmndgofjghchj"
 }
