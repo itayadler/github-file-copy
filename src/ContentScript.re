@@ -2,7 +2,7 @@ let getFileText = () => {
   open Webapi.Dom;
   open Belt.Option;
   let result = ref("");
-  let codeViewerElement = Document.querySelector(".blob-wrapper", document);
+  let codeViewerElement = Document.querySelector("[itemprop='text'", document);
   if (isSome(codeViewerElement)) {
     let codeViewerElement = getExn(codeViewerElement);
     let lineNumberElements = Element.querySelectorAll(".blob-num", codeViewerElement);

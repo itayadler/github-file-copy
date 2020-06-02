@@ -1,7 +1,7 @@
 {
   "name": "github-copy-file",
   "description": "A chrome extension that adds a Copy file to clipboard button to Github code browser",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "scripts": {
     "sign": "web-ext -c config/webext.conf.js sign",
